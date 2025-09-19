@@ -1,0 +1,166 @@
+/* Reset */
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f6fa;
+  color: #333;
+  min-height: 100vh;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+}
+
+/* Card */
+.quiz-container {
+  background-color: #fff;
+  padding: 20px;
+  margin: auto;
+  max-width: 500px; width: 90%;
+  text-align: center; 
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+/* Heading */
+.quiz-container h1 { 
+  margin-bottom: 20px; 
+  color: #2c3e50; 
+}
+
+/* Flag */
+#flag-img {
+  display: block;
+  margin: 0 auto 20px auto;
+  max-width: 100%; 
+  height: 200px; 
+  object-fit: contain;
+  border: 2px solid #7b0fff; 
+  border-radius: 10px;
+  box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+}
+
+/* Options */
+#options-container { 
+  margin-top: 40px; 
+}
+
+#options-container button {
+  display: block; 
+  width: 100%;
+  margin: 10px 0; 
+  padding: 12px; 
+  font-size: 16px;
+  border: none; 
+  background-color: #4c4cff; 
+  color: #fff;
+  border-radius: 8px; 
+  cursor: pointer;
+  transition: background-color .3s, transform .3s;
+}
+#options-container button:hover { 
+  background-color: #0056b3; 
+  transform: scale(1.03); 
+}
+
+/* Controls row (Score left, Next right) */
+.controls-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+/* Score */
+#score { 
+  font-size: 16px; 
+  color: #666; 
+}
+
+/* Next button — reserve space, no jump */
+#next-btn {
+  display: block; 
+  padding: 10px 20px; 
+  font-size: 15px;
+  background-color: #28a745; 
+  color: #fff; 
+  border: none; 
+  border-radius: 8px; 
+  cursor: pointer;
+  visibility: hidden; 
+  pointer-events: none; /* hidden by default, but space kept */
+}
+#next-btn.show { 
+  visibility: visible; 
+  pointer-events: auto; 
+}
+
+  #next-btn:hover { 
+  background-color: #1e7e34; 
+}
+
+/* Feedback (now sits below controls) */
+#feedback {
+  background-color: #f0f4ff;
+  padding: 10px; 
+  margin-top: 16px; 
+  border-radius: 8px;
+  font-weight: 600; 
+  font-size: 18px;
+  opacity: 0; 
+  transform: translateY(10px);
+  transition: opacity .4s ease, transform .4s ease;
+  /* reserve a bit of space so restart button below doesn't jump */
+  min-height: 56px;
+}
+.feedback-visible { 
+  opacity: 1; 
+  transform: translateY(0); 
+}
+
+/* Restart */
+#restart-btn {
+  padding: 10px 20px; 
+  margin-top: 12px; 
+  font-size: 15px;
+  background-color: #6c757d; 
+  color: #fff; border: none; 
+  border-radius: 8px; 
+  cursor: pointer;
+  display: none; /* shown at end */
+}
+#restart-btn:hover { 
+  background-color: #5a6268; 
+}
+
+/* Question Counter */
+#question-count 
+{ font-size: 16px; 
+  margin: 15px 0; 
+  color: #555; 
+  font-weight: 700;
+}
+
+/* Correct / wrong */
+button.correct { 
+  background-color: #28a745 !important; 
+}
+
+  button.wrong { 
+    background-color: #dc3545 !important; 
+  }
+
+/* Final result styling */
+#instructions.final-result {
+  font-size: 23px; 
+  font-weight: 700; 
+  text-align: center;
+  display: block; 
+  margin: 28px auto 12px; 
+  line-height: 1.4;
+}
